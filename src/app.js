@@ -2,6 +2,7 @@ import { El } from './components/shared/El';
 import { Test } from './components/test';
 import { counter } from './utils/counter';
 export const App = () => {
+  console.log('maktab');
   let amount = counter(10);
   function logData() {
     console.log('clicked');
