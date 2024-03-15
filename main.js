@@ -1,3 +1,3 @@
 import './src/style/index.css';
-
-document.querySelector('#app');
+import { App } from './src/app.js';
+document.querySelector('#app').append(App());
