@@ -1,3 +1,8 @@
 import './src/style/index.css';
-import { App } from './src/app.js';
-document.querySelector('#app').append(App());
+import { Router } from './src/routes/index.js';
+
+if (location.pathname === '/') {
+  Router().navigate('/');
+} else {
+  Router().navigate(location.pathname);
+}

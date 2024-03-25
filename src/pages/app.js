@@ -1,6 +1,7 @@
-import { El } from './components/shared/El';
-import { Test } from './components/test';
-import { counter } from './utils/counter';
+import { El } from '../components/shared/El';
+import { Test } from '../components/test';
+import { Router } from '../routes';
+import { counter } from '../utils/counter';
 export const App = () => {
   console.log('maktab');
   let amount = counter(10);
@@ -10,7 +11,7 @@ export const App = () => {
   }
   return El({
     element: 'div',
-    className: 'bg-blue-400 flex justify-between',
+    className: 'bg-blue-400 flex justify-between flex-col',
     children: [
       El({
         element: 'div',
@@ -51,8 +52,29 @@ export const App = () => {
         element: 'img',
         className: 'w-72 h-auto',
         src: './src/assets/images/cars.jpeg',
+        eventListener: [
+          {
+            event: 'click',
+            callback: () => {
+              location.reload();
+            },
+          },
+        ],
       }),
       Test(),
+      El({
+        element: 'div',
+        className: 'bg-red-400 text-white',
+        innerText: 'about us',
+        eventListener: [
+          {
+            event: 'click',
+            callback: () => {
+              Router().navigate('/about-us');
+            },
+          },
+        ],
+      }),
     ],
   });
 };

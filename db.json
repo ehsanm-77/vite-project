@@ -1,0 +1,7 @@
+{
+  "product": [
+    { "id": 1, "brand": "samsung", "name": "a72" },
+    { "id": 2, "brand": "xiaomi", "name": "poco x3" },
+    { "id": 3, "brand": "apple", "name": "iphone12 pro max" }
+  ]
+}

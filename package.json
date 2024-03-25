@@ -15,6 +15,9 @@
     "vite": "^5.1.6"
   },
   "dependencies": {
+    "axios": "^1.6.8",
+    "json-server": "^1.0.0-alpha.23",
+    "navigo": "^8.11.1",
     "vite-jsconfig-paths": "^2.0.1"
   }
 }
